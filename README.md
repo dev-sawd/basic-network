@@ -8,7 +8,7 @@ docker list
 - ca.org1.example.com
 - peer0.org1.example.com
 - peer1.org1.example.com
-- couchdb1
+- couchdb
 - couchdb2
 - orderer.example.com
 - orderer2.example.com

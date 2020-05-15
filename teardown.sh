@@ -13,8 +13,11 @@ docker-compose -f docker-compose.yml kill && docker-compose -f docker-compose.ym
 # remove the local state
 rm -f ~/.hfc-key-store/*
 
+# remove couchdb data
+rm -rf ./data
+
 # remove chaincode docker images
 docker rm $(docker ps -aq)
-docker rmi $(docker images -a -q)
+# docker rmi $(docker images -a -q)
 
 # Your system is now clean
