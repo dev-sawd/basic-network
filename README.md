@@ -1,10 +1,8 @@
-## Basic Network Config
+## Basic Network Config using TLS
 
-This project for hyperledger fabric study.
+This project is for hyperledger fabric study.
 
-To start the basic network run ``auto.sh``.
-
-docker list
+### docker list
 - ca.org1.example.com
 - peer0.org1.example.com
 - peer1.org1.example.com
@@ -15,8 +13,26 @@ docker list
 - orderer3.example.com
 - cli
 
-sequence
--
+### Ordering service
+- solo(default)
+
+To start the basic network run ``start.sh``.
+
+### sequence
+- generating orderer genesis block
+- generating channel configuration transaction 'channel.tx'
+- generating anchor peer update for Org1MSP
+- docker-compose up
+
+below step is scripts/script.sh excuting in cli
+- createChannel
+- joinChannel
+- updateAnchorPeers
+- installChaincode
+- instantiateChaincode
+- chaincodeQuery
+- chaincodeInvoke
+- chaincodeQuery (check invoke result)
 
 clear docker container and chaincode ``teardown.sh``.
 
